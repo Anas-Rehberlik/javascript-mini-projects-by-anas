@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Pressed Key on Screen</title>
+
+    <style>
+
+*{
+
+    background:linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    color: white;
+ 
+  
+    font-weight:100;
+    user-select: none;
+    font-family: Helvetica;
+
+    font-size: 5rem;
+  
+      padding: 30px 60px;
+      border-radius: 15px;
+      box-shadow: 
+      0 4px 0 #222,       
+      0 6px 15px rgba(0, 0, 0, 0.5), 
+      inset 0 1px 2px rgba(255, 255, 255, 0.1); 
+      background: #444;
+ 
+  line-height: 60px;
+  border-radius: 6px;
+
+}
+
+
+
+
+    </style>
+
+</head>
+<body>
+    
+  
+
+
+    <div id="main">
+
+      
+
+        <h1>Type...</h1>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script>
+
+//Select h1 to change according to which keyboard key is pressed
+
+let h = document.querySelector("h1")
+
+window.addEventListener("keydown", function(dets){
+    // console.log(dets.key)
+    // h.textContent = dets.key
+
+    if(dets.key === " "){
+        h.textContent = "SPACE"
+    } else {
+        h.textContent = dets.key
+    }
+})
+
+    </script>
+</body>
+</html>
