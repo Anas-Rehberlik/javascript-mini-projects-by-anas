@@ -51,6 +51,12 @@ h1{
 
 }
 
+.pressed {
+    transform: scale(0.95); 
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); 
+    background: #666; 
+}
+
 
 
 
@@ -79,15 +85,32 @@ h1{
 
 let h = document.querySelector("h1")
 
+let keyPressSound = new Audio("https://cdn.pixabay.com/audio/2022/03/15/audio_bca2811b06.mp3"); 
+
+
+
 window.addEventListener("keydown", function(dets){
     // console.log(dets.key)
     // h.textContent = dets.key
+
+    // Play the sound
+    keyPressSound.currentTime = 0; // Rewind to start in case the key is held down
+    keyPressSound.play(); // Play sound
 
     if(dets.key === " "){
         h.textContent = "SPACE"
     } else {
         h.textContent = dets.key
     }
+
+    
+        h.classList.add("pressed")
+
+   
+})
+
+window.addEventListener("keyup", function(dets){
+    h.classList.remove("pressed")
 })
 
     </script>
