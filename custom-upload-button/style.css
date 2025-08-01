@@ -1,0 +1,48 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+background: rgb(170, 169, 169);
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    width: 100%;
+    height: 100%;
+}
+
+input{
+    display: none;
+}
+
+
+#btn{
+    
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.747) 0%, rgba(9, 9, 121, 0.705) 35%, #00d5ffb0 100%);
+    padding: 15px 30px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    
+}
+
+#btn:hover{
+    background:linear-gradient(90deg,rgb(30, 99, 126) 0%, rgb(53, 187, 109) 50%, rgb(224, 207, 52) 100%);;
+
+    cursor: pointer;
+
+}
+
+
+
+
